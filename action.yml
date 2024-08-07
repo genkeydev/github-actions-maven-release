@@ -1,6 +1,5 @@
 # action.yml
-name: 'Java Maven release'
-author: https://github.com/qcastel
+name: 'Gen Release Code'
 description: 'Release your Java application and publish artifacts'
 branding:
   color: gray-dark
