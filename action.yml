@@ -63,7 +63,11 @@ inputs:
     required: false
     default: ''
   maven-servers:
-    description: 'The maven server repositories, in a JSON format. Example: [{"id": "serverId1", "username": "username", "password": "password1", "privateKey": "privatekey1", "passphrase": "passphrase1"}, {"id": "serverId2", "username": "username2", "password": "password2"}]'
+    description: 'The maven server repositories, in a JSON format. Example: [{"id": "serverId1", "username": "username", "password": "password1"}, {"id": "serverId2", "username": "username2", "password": "password2"}]'
+    required: false
+    default: '[]'
+  maven-mirrors:
+    description: 'The maven mirrors, in a JSON format. Example: [{"id": "serverId1", "url": "url", "mirrorOf": "mirror"}, {"id": "serverId2", "url": "url", "mirrorOf": "mirror"}]'
     required: false
     default: '[]'
   maven-args:
@@ -149,6 +153,7 @@ runs:
     MAVEN_REPO_SERVER_USERNAME: ${{ inputs.maven-repo-server-username }}
     MAVEN_REPO_SERVER_PASSWORD: ${{ inputs.maven-repo-server-password }}
     MAVEN_SERVERS: ${{ inputs.maven-servers }}
+    MAVEN_MIRRORS: ${{ inputs.maven-mirrors }}
     MAVEN_PROJECT_FOLDER: ${{ inputs.maven-project-folder }}
     MAVEN_ARGS: ${{ inputs.maven-args }}
     MAVEN_OPTION: ${{ inputs.maven-options}}
