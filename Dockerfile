@@ -1,3 +1,3 @@
-FROM ghcr.io/genkeydev/genkey-maven-release:latest
+FROM ghcr.io/genkeydev/docker-maven-release:latest
 
 COPY ./release-github-actions.sh /usr/local/bin
