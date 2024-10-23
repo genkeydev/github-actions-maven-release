@@ -105,19 +105,19 @@ If you are adventurous and like to be always on top of this github action, you c
 
 ```
  - name: Release
-      uses: qcastel/github-actions-maven-release@master
+      uses: genkeydev/github-actions-maven-release@master
       with:
 ```
 
 If you are more reserve, you can use a tag instead. You can find the list of the tags for this github action here:
 
-https://github.com/qcastel/github-actions-maven-release/tags
+https://github.com/genkeydev/github-actions-maven-release/tags
 
 To use a tag:
 
 ```
  - name: Release
-      uses: qcastel/github-actions-maven-release@TAG_NAME
+      uses: genkeydev/github-actions-maven-release@TAG_NAME
       with:
 ```
 
@@ -125,7 +125,7 @@ If you are concerned about the security of this github action, you can also move
 
 ```
  - name: Release
-      uses: qcastel/github-actions-maven-release@COMMIT_HASH
+      uses: genkeydev/github-actions-maven-release@COMMIT_HASH
       with:
 ```
 
@@ -149,7 +149,7 @@ Although you may found better to use a SSH key instead. For this, generate an SS
 Personally, I like generating an SSH inside a temporary docker image and configure it as a deploy key in my repository:
 
 ```bash
-docker run -it qcastel/maven-release:latest  bash
+docker run -it ghcr.io/genkeydev/docker-maven-release:latest  bash
 ```
 
 ```bash
@@ -517,7 +517,7 @@ If you want to set up a passphrase:
 f you like how we created a SSH key pair, here is the same idea using a docker image to generate a GPG key:
 
 ```bash
-docker run -it qcastel/maven-release:latest  bash
+docker run -it ghcr.io/genkeydev/docker-maven-release:latest  bash
 ```
 
 ```bash
